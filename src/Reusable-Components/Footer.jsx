@@ -26,11 +26,11 @@ const Footer = () => {
             <h4 className="mb-15">Follow us</h4>
             <div className="social-icons flex">
               <div className="icon-box">
-                <FaMedal />
+                <FaMedal size={18} />
               </div>
 
               <div className="icon-box">
-                <HiOutlineMail />
+                <HiOutlineMail size={18} />
               </div>
             </div>
           </div>

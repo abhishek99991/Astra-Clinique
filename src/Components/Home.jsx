@@ -5,8 +5,14 @@ import { FiSearch, FiFeather } from "react-icons/fi";
 import ourRequestImg from "../../src/images/our-request.png";
 import { FiDroplet } from "react-icons/fi";
 import { GiMedicines, GiBandageRoll } from "react-icons/gi";
+import whyChooseImg from "../images/why-choose-left.png";
+import { FaRegFlag, FaRegEye } from "react-icons/fa";
+import { FaStethoscope, FaCheck } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 
-import { FaStethoscope } from "react-icons/fa";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Home = () => {
   return (
@@ -219,6 +225,280 @@ const Home = () => {
               <p>Evaluation complète de votre état de santé par une experte.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="why-choose gap">
+        <div className="container flex al-center space-bw">
+          <div className="why-choose-image col-50">
+            <img src={whyChooseImg} alt="Clinic Interior" />
+          </div>
+
+          <div className="why-choose-content col-50">
+            <h2 className="mb-15">Why choose Astra?</h2>
+
+            <div className="why-choose-item flex">
+              <div className="why-choose-icon">
+                <FaCheck size={16} />
+              </div>
+
+              <div>
+                <h3 className="">Fast access</h3>
+                <p>Forget endless waiting lists.</p>
+              </div>
+            </div>
+
+            <div className="why-choose-item flex">
+              <div className="why-choose-icon">
+                <FaCheck size={16} />
+              </div>
+
+              <div>
+                <h3 className="">Modern clinic</h3>
+                <p>State-of-the-art equipment in a soothing setting.</p>
+              </div>
+            </div>
+
+            <div className="why-choose-item flex">
+              <div className="why-choose-icon">
+                <FaCheck size={16} />
+              </div>
+
+              <div>
+                <h3 className="">Skilled and compassionate nurse</h3>
+                <p>Medical excellence combined with empathy.</p>
+              </div>
+            </div>
+
+            <div className="why-choose-item flex">
+              <div className="why-choose-icon">
+                <FaCheck size={16} />
+              </div>
+
+              <div>
+                <h3>Simple and efficient experience</h3>
+                <p>From booking your appointment to the final follow-up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="gap">
+        <div className="container flex al-center purpose-section space-bw">
+          {/* Left Side */}
+          <div className="purpose-left col-50">
+            <h3 className="mb-15">Our Purpose</h3>
+
+            <div className="purpose-item mb-15">
+              <div className="purpose-title flex al-center mb-10">
+                <FaRegFlag className="purpose-icon" />
+                <h4>Mission</h4>
+              </div>
+
+              <p>
+                To provide accessible, safe, and personalized nursing care,
+                contributing to the health and well-being of the Mirabel
+                community.
+              </p>
+            </div>
+
+            <div className="purpose-item mb-15">
+              <div className="purpose-title flex al-center mb-10">
+                <FaRegEye className="purpose-icon" />
+                <h4>Vision</h4>
+              </div>
+
+              <p>
+                To become the leading nursing clinic in Mirabel, recognized for
+                human excellence and clinical efficiency.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side */}
+          <div className="purpose-right col-50">
+            <h3 className="mb-15">Core Values</h3>
+
+            <div className="purpose-values-grid flex al-center space-bw">
+              <div className="purpose-value-card col-50 mb-15">
+                <div className="core-val-inner">Accessibility</div>
+                <p>Care at your fingertips.</p>
+              </div>
+
+              <div className="purpose-value-card col-50 mb-15">
+                <div className="core-val-inner">Professionalism</div>
+                <p>Rigor and ethics.</p>
+              </div>
+
+              <div className="purpose-value-card col-50 mb-15">
+                <div className="core-val-inner">Compassion</div>
+                <p>The human at the heart of care.</p>
+              </div>
+
+              <div className="purpose-value-card col-50 mb-15">
+                <div className="core-val-inner">Quality</div>
+                <p>Excellence in every action.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="gap testimonial-section">
+        <div className="container testimonial-cont">
+          <h2>What our patients say</h2>
+
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={25}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {/* Slide 1 */}
+            <SwiperSlide>
+              <div className="testimonial-card">
+                <div className="quote">“</div>
+
+                <p className="testimonial-text">
+                  "Impeccable service. I was able to get a same-day appointment
+                  for ear irrigation. Fast and very professional."
+                </p>
+
+                <div className="user">
+                  <div
+                    className="avatar"
+                    style={{
+                      background: "#e5d9ff",
+                      color: "#6b46c1",
+                    }}
+                  >
+                    JD
+                  </div>
+
+                  <div className="user-info">
+                    <h4>Jean-Denis P.</h4>
+                    <p>Patient since 2023</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Slide 2 */}
+            <SwiperSlide>
+              <div className="testimonial-card">
+                <div className="quote">“</div>
+
+                <p className="testimonial-text">
+                  "The blood test was done gently. You really feel listened to
+                  and taken care of at Astra."
+                </p>
+
+                <div className="user">
+                  <div
+                    className="avatar"
+                    style={{
+                      background: "#dff3cf",
+                      color: "#4b7c2b",
+                    }}
+                  >
+                    ML
+                  </div>
+
+                  <div className="user-info">
+                    <h4>Marie-Lyne G.</h4>
+                    <p>Regular patient</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Slide 3 */}
+            <SwiperSlide>
+              <div className="testimonial-card">
+                <div className="quote">“</div>
+
+                <p className="testimonial-text">
+                  "Finally, a private clinic in Mirabel that offers a human
+                  service without the cold aspect of large hospitals."
+                </p>
+
+                <div className="user">
+                  <div
+                    className="avatar"
+                    style={{
+                      background: "#ececec",
+                      color: "#666",
+                    }}
+                  >
+                    RC
+                  </div>
+
+                  <div className="user-info">
+                    <h4>Robert C.</h4>
+                    <p>New patient</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="testimonial-card">
+                <div className="quote">“</div>
+
+                <p className="testimonial-text">
+                  "Finally, a private clinic in Mirabel that offers a human
+                  service without the cold aspect of large hospitals."
+                </p>
+
+                <div className="user">
+                  <div
+                    className="avatar"
+                    style={{
+                      background: "#ececec",
+                      color: "#666",
+                    }}
+                  >
+                    RC
+                  </div>
+
+                  <div className="user-info">
+                    <h4>Robert C.</h4>
+                    <p>New patient</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+      <section className="appointment-section gap">
+        <div className="appointment-card">
+          <h2>Regain your comfort today.</h2>
+
+          <p>
+            Book an appointment and let us provide the right care, at the right
+            time. Your health shouldn’t have to wait.
+          </p>
+
+          <button>Book an appointment now</button>
         </div>
       </section>
     </>
